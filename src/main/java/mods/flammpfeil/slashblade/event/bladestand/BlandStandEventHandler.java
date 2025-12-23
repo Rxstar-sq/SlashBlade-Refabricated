@@ -359,32 +359,19 @@ public class BlandStandEventHandler {
         }
 
         AtomicBoolean success = new AtomicBoolean(false);
-        var bladeKey = BuiltInRegistries.ITEM.getKey(blade.getItem());
-        var soulKey = BuiltInRegistries.ITEM.getKey(stack.getItem());
-        var craftEnchants = EnchantmentHelper.getEnchantmentsForCrafting(stack);
-        SlashBlade.LOGGER.info("[ProudSoul] 附魔准备: 刀={} 耀魂={} 已附魔={} 附魔数量={}",
-            bladeKey, soulKey, stack.isEnchanted(), craftEnchants.size());
 
         EnchantmentHelper.getEnchantmentsForCrafting(stack).keySet().forEach((enchantment) -> {
             if (event.isCanceled()) {
                 return;
             }
-            // 调试：记录当前尝试的刀与附魔
-            var enchKey = enchantment.unwrapKey().isPresent() ? enchantment.unwrapKey().get().location() : null;
-            SlashBlade.LOGGER.info("[ProudSoul] 尝试为刀附魔: 刀={} 附魔={} 可附魔={} canEnchant={}",
-                    bladeKey, enchKey, blade.isEnchantable(), enchantment.value().canEnchant(blade));
             // 对于SlashBlade，使用更宽松的附魔检查规则
-            // 允许任何能够被附魔的附魔应用到刀上
             if (blade.getItem() instanceof ItemSlashBlade) {
                 // ItemSlashBlade处理自己的兼容性检查
                 if (!blade.canBeEnchantedWith(enchantment, EnchantingContext.ACCEPTABLE)) {
-                    SlashBlade.LOGGER.info("[ProudSoul] canBeEnchantedWith 拒绝: 刀={} 附魔={}", bladeKey, enchKey);
                     return;
                 }
             } else if (!blade.isEnchantable() || !enchantment.value().canEnchant(blade)) {
                 // 对于其他刀，只检查基本的能否附魔条件
-                SlashBlade.LOGGER.info("[ProudSoul] 原版兼容性拒绝: 刀={} 附魔={} isEnchantable={} canEnchant={}",
-                        bladeKey, enchKey, blade.isEnchantable(), enchantment.value().canEnchant(blade));
                 return;
             }
 
@@ -408,14 +395,12 @@ public class BlandStandEventHandler {
 
             ProudSoulEnchantmentEvent.CALLBACK.invoker().onProudSoulEnchantment(e);
             if (e.isCanceled()) {
-                SlashBlade.LOGGER.info("[ProudSoul] 概率/回调取消: 刀={} 附魔={} 概率={}", bladeKey, enchKey, e.getProbability());
                 return;
             }
 
             totalShrinkCount.set(e.getTotalShrinkCount());
 
             EnchantmentHelper.updateEnchantments(blade, mutable -> mutable.set(e.getEnchantment(), e.getEnchantLevel()));
-            SlashBlade.LOGGER.info("[ProudSoul] 附魔成功: 刀={} 附魔={} 等级={}", bladeKey, enchKey, e.getEnchantLevel());
             success.set(true);
 
             if (!e.willTryNextEnchant()) {
@@ -430,8 +415,6 @@ public class BlandStandEventHandler {
 
         if (success.get()) {
             spawnSucceedEffects(world, bladeStand, random);
-        } else {
-            SlashBlade.LOGGER.info("[ProudSoul] 附魔未成功: 刀={} 耀魂={} (可能是概率/兼容性/无可用附魔)", bladeKey, soulKey);
         }
 
         event.setCanceled(true);
