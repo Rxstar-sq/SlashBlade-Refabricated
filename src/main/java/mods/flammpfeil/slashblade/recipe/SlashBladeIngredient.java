@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import mods.flammpfeil.slashblade.SlashBlade;
+import mods.flammpfeil.slashblade.data.tag.SlashBladeItemTags;
 import mods.flammpfeil.slashblade.init.SBItems;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredient;
 import net.fabricmc.fabric.api.recipe.v1.ingredient.CustomIngredientSerializer;
@@ -75,7 +76,28 @@ public record SlashBladeIngredient(HolderSet<Item> items, RequestDefinition requ
     public boolean test(ItemStack input) {
         if (input == null)
             return false;
-        return items.contains(input.getItemHolder()) && this.request.test(input);
+        
+        // Check if the item matches directly
+        if (items.contains(input.getItemHolder())) {
+            return this.request.test(input);
+        }
+        
+        // For backward compatibility with unique ID blades, also accept any SlashBlade item
+        // if the original ingredient specifies the generic "slashblade:slashblade"
+        Item genericBlade = SBItems.SLASHBLADE;
+        boolean hasGenericBlade = false;
+        for (var holder : items) {
+            if (holder.value() == genericBlade) {
+                hasGenericBlade = true;
+                break;
+            }
+        }
+        
+        if (hasGenericBlade && input.is(SlashBladeItemTags.SLASH_BLADES)) {
+            return this.request.test(input);
+        }
+        
+        return false;
     }
 
     @Override

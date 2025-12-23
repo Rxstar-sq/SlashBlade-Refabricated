@@ -7,6 +7,7 @@ import mods.flammpfeil.slashblade.data.tag.SlashBladeItemTags;
 import mods.flammpfeil.slashblade.entity.BladeStandEntity;
 import mods.flammpfeil.slashblade.event.SlashBladeEvent;
 import mods.flammpfeil.slashblade.init.SBItems;
+import mods.flammpfeil.slashblade.item.ItemSlashBlade;
 import mods.flammpfeil.slashblade.recipe.RequestDefinition;
 import mods.flammpfeil.slashblade.recipe.SlashBladeIngredient;
 import mods.flammpfeil.slashblade.registry.SlashArtsRegistry;
@@ -361,7 +362,15 @@ public class BlandStandEventHandler {
             if (event.isCanceled()) {
                 return;
             }
-            if (!blade.canBeEnchantedWith(enchantment, EnchantingContext.ACCEPTABLE)) {
+            // 对于SlashBlade，使用更宽松的附魔检查规则
+            // 允许任何能够被附魔的附魔应用到刀上
+            if (blade.getItem() instanceof ItemSlashBlade) {
+                // ItemSlashBlade处理自己的兼容性检查
+                if (!blade.canBeEnchantedWith(enchantment, EnchantingContext.ACCEPTABLE)) {
+                    return;
+                }
+            } else if (!blade.isEnchantable() || !enchantment.value().canEnchant(blade)) {
+                // 对于其他刀，只检查基本的能否附魔条件
                 return;
             }
 
