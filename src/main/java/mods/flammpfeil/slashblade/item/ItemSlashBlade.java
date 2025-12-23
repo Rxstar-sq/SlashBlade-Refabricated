@@ -59,6 +59,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -92,6 +93,10 @@ public class ItemSlashBlade extends SwordItem implements ItemSlashBladeExtension
     @Override
     public boolean canBeEnchantedWith(ItemStack stack, Holder<Enchantment> enchantment, EnchantingContext context) {
         if (enchantment.unwrapKey().isPresent() && exEnchantment.contains(enchantment.unwrapKey().get()))
+            return true;
+        // 让所有常规“武器”类附魔（例如锋利、亡灵杀手、节肢杀手、抢夺、击退、火焰附加、横扫之刃、耐久、经验修补、消失诅咒等）
+        // 对 SlashBlade 生效，以与原版 1.21.1 行为一致
+        if (enchantment.value().canEnchant(new ItemStack(Items.DIAMOND_SWORD)))
             return true;
         return super.canBeEnchantedWith(stack, enchantment, context);
     }
