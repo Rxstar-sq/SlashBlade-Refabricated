@@ -53,7 +53,7 @@ public class SlashBladeBuiltInRegistry {
 
     public static void registerAll(BootstrapContext<SlashBladeDefinition> bootstrap) {
         bootstrap.register(KOSEKI,
-                new SlashBladeDefinition(SlashBlade.prefix("koseki"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_koseki"),
                         RenderDefinition.Builder
                                 .newInstance()
                                 .effectColor(0x303030)
@@ -70,7 +70,7 @@ public class SlashBladeBuiltInRegistry {
                         List.of(new EnchantmentDefinition(Enchantments.POWER.location(), 2))));
 
         bootstrap.register(SABIGATANA,
-                new SlashBladeDefinition(SlashBlade.prefix("sabigatana"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_sabigatana"),
                         RenderDefinition.Builder
                                 .newInstance().textureName(SlashBlade.prefix("model/named/muramasa/sabigatana.png"))
                                 .modelName(SlashBlade.prefix("model/named/muramasa/muramasa.obj"))
@@ -79,7 +79,7 @@ public class SlashBladeBuiltInRegistry {
                         PropertiesDefinition.Builder.newInstance().baseAttackModifier(3.0F).maxDamage(40).build(),
                         Lists.newArrayList()));
 
-        bootstrap.register(SABIGATANA_BROKEN, new SlashBladeDefinition(SlashBlade.prefix("sabigatana"),
+        bootstrap.register(SABIGATANA_BROKEN, new SlashBladeDefinition(SlashBlade.prefix("slashblade_sabigatana_broken"),
                 RenderDefinition.Builder
                         .newInstance().textureName(SlashBlade.prefix("model/named/muramasa/sabigatana.png"))
                         .modelName(SlashBlade.prefix("model/named/muramasa/muramasa.obj"))
@@ -90,7 +90,7 @@ public class SlashBladeBuiltInRegistry {
                 Lists.newArrayList()));
 
         bootstrap.register(DOUTANUKI,
-                new SlashBladeDefinition(SlashBlade.prefix("doutanuki"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_doutanuki"),
                         RenderDefinition.Builder.newInstance()
                                 .textureName(SlashBlade.prefix("model/named/muramasa/doutanuki.png"))
                                 .modelName(SlashBlade.prefix("model/named/muramasa/muramasa.obj"))
@@ -102,7 +102,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(TAGAYASAN,
-                new SlashBladeDefinition(SlashBlade.prefix("tagayasan"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_tagayasan"),
                         RenderDefinition.Builder.newInstance()
                                 .textureName(SlashBlade.prefix("model/named/tagayasan.png"))
                                 .standbyRenderType(CarryType.KATANA)
@@ -113,7 +113,7 @@ public class SlashBladeBuiltInRegistry {
                         List.of(new EnchantmentDefinition(Enchantments.SMITE.location(), 3),
                                 new EnchantmentDefinition(Enchantments.UNBREAKING.location(), 3))));
 
-        bootstrap.register(YASHA, new SlashBladeDefinition(SlashBlade.prefix("yasha"),
+        bootstrap.register(YASHA, new SlashBladeDefinition(SlashBlade.prefix("slashblade_yasha"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/yasha/yasha.png"))
                         .modelName(SlashBlade.prefix("model/named/yasha/yasha.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -122,7 +122,7 @@ public class SlashBladeBuiltInRegistry {
                         .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.SAKURA_END)).maxDamage(70).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(YASHA_TRUE, new SlashBladeDefinition(SlashBlade.prefix("yasha_true"),
+        bootstrap.register(YASHA_TRUE, new SlashBladeDefinition(SlashBlade.prefix("slashblade_yasha_true"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/yasha/yasha.png"))
                         .modelName(SlashBlade.prefix("model/named/yasha/yasha_true.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -132,7 +132,7 @@ public class SlashBladeBuiltInRegistry {
                         .defaultSwordType(List.of(SwordType.BEWITCHED)).maxDamage(70).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(AGITO_RUST, new SlashBladeDefinition(SlashBlade.prefix("agito_rust"),
+        bootstrap.register(AGITO_RUST, new SlashBladeDefinition(SlashBlade.prefix("slashblade_agito_rust"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/agito_rust.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -141,7 +141,7 @@ public class SlashBladeBuiltInRegistry {
                         .defaultSwordType(List.of(SwordType.SEALED)).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(AGITO, new SlashBladeDefinition(SlashBlade.prefix("agito"),
+        bootstrap.register(AGITO, new SlashBladeDefinition(SlashBlade.prefix("slashblade_agito"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/agito_false.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -150,7 +150,7 @@ public class SlashBladeBuiltInRegistry {
                         .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.WAVE_EDGE)).maxDamage(60).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(OROTIAGITO_RUST, new SlashBladeDefinition(SlashBlade.prefix("orotiagito_rust"),
+        bootstrap.register(OROTIAGITO_RUST, new SlashBladeDefinition(SlashBlade.prefix("slashblade_orotiagito_rust"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/agito_rust_true.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -159,7 +159,7 @@ public class SlashBladeBuiltInRegistry {
                         .defaultSwordType(List.of(SwordType.SEALED)).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(OROTIAGITO_SEALED, new SlashBladeDefinition(SlashBlade.prefix("orotiagito_sealed"),
+        bootstrap.register(OROTIAGITO_SEALED, new SlashBladeDefinition(SlashBlade.prefix("slashblade_orotiagito_sealed"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/agito_true.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -168,7 +168,7 @@ public class SlashBladeBuiltInRegistry {
                         .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.WAVE_EDGE)).maxDamage(60).build(),
                 Lists.newArrayList()));
 
-        bootstrap.register(OROTIAGITO, new SlashBladeDefinition(SlashBlade.prefix("orotiagito"),
+        bootstrap.register(OROTIAGITO, new SlashBladeDefinition(SlashBlade.prefix("slashblade_orotiagito"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/orotiagito.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -179,7 +179,7 @@ public class SlashBladeBuiltInRegistry {
                 Lists.newArrayList()));
 
         bootstrap.register(RODAI_WOODEN,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_wooden"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_wooden"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/rodai_wooden.png"))
                                 .standbyRenderType(CarryType.DEFAULT)
                                 .build(),
@@ -187,7 +187,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RODAI_STONE,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_stone"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_stone"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/rodai_stone.png"))
                                 .standbyRenderType(CarryType.DEFAULT)
                                 .build(),
@@ -195,7 +195,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RODAI_IRON,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_iron"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_iron"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/rodai_iron.png"))
                                 .standbyRenderType(CarryType.DEFAULT)
                                 .build(),
@@ -203,7 +203,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RODAI_GOLDEN,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_golden"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_golden"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/rodai_golden.png"))
                                 .standbyRenderType(CarryType.DEFAULT)
                                 .build(),
@@ -211,7 +211,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RODAI_DIAMOND,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_diamond"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_diamond"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/rodai_diamond.png"))
                                 .standbyRenderType(CarryType.DEFAULT)
                                 .build(),
@@ -219,7 +219,7 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RODAI_NETHERITE,
-                new SlashBladeDefinition(SlashBlade.prefix("rodai_netherite"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_rodai_netherite"),
                         RenderDefinition.Builder.newInstance()
                                 .textureName(SlashBlade.prefix("model/rodai_netherite.png"))
                                 .standbyRenderType(CarryType.DEFAULT).build(),
@@ -227,13 +227,13 @@ public class SlashBladeBuiltInRegistry {
                         Lists.newArrayList()));
 
         bootstrap.register(RUBY,
-                new SlashBladeDefinition(SlashBlade.prefix("ruby"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_ruby"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/ruby.png"))
                                 .standbyRenderType(CarryType.DEFAULT).build(),
                         PropertiesDefinition.Builder.newInstance().baseAttackModifier(5.0F).maxDamage(45).build(),
                         Lists.newArrayList()));
 
-        bootstrap.register(FOX_BLACK, new SlashBladeDefinition(SlashBlade.prefix("fox_black"),
+        bootstrap.register(FOX_BLACK, new SlashBladeDefinition(SlashBlade.prefix("slashblade_fox_black"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/sange/black.png"))
                         .modelName(SlashBlade.prefix("model/named/sange/sange.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -245,7 +245,7 @@ public class SlashBladeBuiltInRegistry {
                         new EnchantmentDefinition(Enchantments.KNOCKBACK.location(), 2),
                         new EnchantmentDefinition(Enchantments.FIRE_ASPECT.location(), 2))));
 
-        bootstrap.register(FOX_WHITE, new SlashBladeDefinition(SlashBlade.prefix("fox_white"),
+        bootstrap.register(FOX_WHITE, new SlashBladeDefinition(SlashBlade.prefix("slashblade_fox_white"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/sange/white.png"))
                         .modelName(SlashBlade.prefix("model/named/sange/sange.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -259,7 +259,7 @@ public class SlashBladeBuiltInRegistry {
                         new EnchantmentDefinition(Enchantments.LOOTING.location(), 3))));
 
         bootstrap.register(YAMATO,
-                new SlashBladeDefinition(SlashBlade.prefix("yamato"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_yamato"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/yamato.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj"))
                                 .standbyRenderType(CarryType.DEFAULT)
@@ -271,7 +271,7 @@ public class SlashBladeBuiltInRegistry {
                                 new EnchantmentDefinition(Enchantments.FEATHER_FALLING.location(), 4))));
 
         bootstrap.register(YAMATO_BROKEN,
-                new SlashBladeDefinition(SlashBlade.prefix("yamato"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_yamato_broken"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/yamato.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj"))
                                 .standbyRenderType(CarryType.DEFAULT)
@@ -280,7 +280,7 @@ public class SlashBladeBuiltInRegistry {
                                 .defaultSwordType(List.of(SwordType.BROKEN, SwordType.SEALED)).build(),
                         List.of()));
 
-        bootstrap.register(TUKUMO, new SlashBladeDefinition(SlashBlade.prefix("yuzukitukumo"),
+        bootstrap.register(TUKUMO, new SlashBladeDefinition(SlashBlade.prefix("slashblade_yuzukitukumo"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/a_tukumo.png"))
                         .modelName(SlashBlade.prefix("model/named/agito.obj"))
                         .standbyRenderType(CarryType.PSO2)
@@ -293,7 +293,7 @@ public class SlashBladeBuiltInRegistry {
                         new EnchantmentDefinition(Enchantments.UNBREAKING.location(), 3))));
 
         bootstrap.register(MURAMASA,
-                new SlashBladeDefinition(SlashBlade.prefix("muramasa"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_muramasa"),
                         RenderDefinition.Builder
                                 .newInstance().textureName(SlashBlade.prefix("model/named/muramasa/muramasa.png"))
                                 .modelName(SlashBlade.prefix("model/named/muramasa/muramasa.obj"))
@@ -303,7 +303,7 @@ public class SlashBladeBuiltInRegistry {
                                 .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.DRIVE_VERTICAL)).build(),
                         Lists.newArrayList()));
 
-        bootstrap.register(SANGE, new SlashBladeDefinition(SlashBlade.prefix("sange"),
+        bootstrap.register(SANGE, new SlashBladeDefinition(SlashBlade.prefix("slashblade_sange"),
                 RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/sange/sange.png"))
                         .modelName(SlashBlade.prefix("model/named/sange/sange.obj"))
                         .standbyRenderType(CarryType.PSO2)

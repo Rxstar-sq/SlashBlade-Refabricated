@@ -120,6 +120,38 @@ public class SBItems {
 
     public static final Item SLASHBLADE = register("slashblade", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
 
+    // Named blades with unique IDs
+    public static final Item SLASHBLADE_YAMATO = register("slashblade_yamato", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_YAMATO_BROKEN = register("slashblade_yamato_broken", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_YUZUKITUKUMO = register("slashblade_yuzukitukumo", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_MURAMASA = register("slashblade_muramasa", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RUBY = register("slashblade_ruby", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_SANGE = register("slashblade_sange", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_FOX_BLACK = register("slashblade_fox_black", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_FOX_WHITE = register("slashblade_fox_white", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    
+    public static final Item SLASHBLADE_RODAI_WOODEN = register("slashblade_rodai_wooden", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RODAI_STONE = register("slashblade_rodai_stone", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RODAI_IRON = register("slashblade_rodai_iron", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RODAI_GOLDEN = register("slashblade_rodai_golden", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RODAI_DIAMOND = register("slashblade_rodai_diamond", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_RODAI_NETHERITE = register("slashblade_rodai_netherite", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    
+    public static final Item SLASHBLADE_TAGAYASAN = register("slashblade_tagayasan", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_AGITO = register("slashblade_agito", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_AGITO_RUST = register("slashblade_agito_rust", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_OROTIAGITO = register("slashblade_orotiagito", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_OROTIAGITO_SEALED = register("slashblade_orotiagito_sealed", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_OROTIAGITO_RUST = register("slashblade_orotiagito_rust", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    
+    public static final Item SLASHBLADE_YASHA = register("slashblade_yasha", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_YASHA_TRUE = register("slashblade_yasha_true", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    
+    public static final Item SLASHBLADE_SABIGATANA = register("slashblade_sabigatana", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_SABIGATANA_BROKEN = register("slashblade_sabigatana_broken", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_DOUTANUKI = register("slashblade_doutanuki", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+    public static final Item SLASHBLADE_KOSEKI = register("slashblade_koseki", new ItemSlashBlade(new ItemTierSlashBlade(40, 4F), 4, 0.0F, new Item.Properties()));
+
     public static final Item BLADESTAND_1 = register("bladestand_1", new BladeStandItem((new Item.Properties()).rarity(Rarity.COMMON)));
     public static final Item BLADESTAND_2 = register("bladestand_2", new BladeStandItem((new Item.Properties()).rarity(Rarity.COMMON)));
     public static final Item BLADESTAND_V = register("bladestand_v", new BladeStandItem((new Item.Properties()).rarity(Rarity.COMMON)));
