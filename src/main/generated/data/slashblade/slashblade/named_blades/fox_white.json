@@ -21,6 +21,7 @@
       "lvl": 3
     }
   ],
+  "item": "slashblade:slashblade_fox_white",
   "name": "slashblade:fox_white",
   "properties": {
     "attack_base": 5.0,

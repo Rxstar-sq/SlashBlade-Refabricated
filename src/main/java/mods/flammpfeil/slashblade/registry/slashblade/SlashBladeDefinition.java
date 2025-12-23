@@ -162,6 +162,11 @@ public class SlashBladeDefinition {
         if (BuiltInRegistries.ITEM.containsKey(this.item))
             return BuiltInRegistries.ITEM.get(this.item);
 
+        // Try to get the item based on blade name from SBItems mapping
+        if (this.name != null && this.name.getNamespace().equals(SlashBlade.MODID)) {
+            return SBItems.getNamedBladeItem(this.name.getPath());
+        }
+
         return SBItems.SLASHBLADE;
     }
 

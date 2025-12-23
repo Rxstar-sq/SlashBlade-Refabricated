@@ -13,6 +13,7 @@
       "lvl": 4
     }
   ],
+  "item": "slashblade:slashblade_yamato",
   "name": "slashblade:yamato",
   "properties": {
     "attack_base": 7.0,

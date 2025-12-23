@@ -159,6 +159,42 @@ public class SBItems {
     public static final Item BLADESTAND_1_W = register("bladestand_1w", new BladeStandItem((new Item.Properties()).rarity(Rarity.COMMON), true));
     public static final Item BLADESTAND_2_W = register("bladestand_2w", new BladeStandItem((new Item.Properties()).rarity(Rarity.COMMON), true));
 
+    /**
+     * 根据刀的名称获取对应的物品 Item
+     * 如果找不到，返回默认的 SLASHBLADE
+     */
+    public static Item getNamedBladeItem(String bladeName) {
+        return switch (bladeName) {
+            case "yamato" -> SLASHBLADE_YAMATO;
+            case "yamato_broken" -> SLASHBLADE_YAMATO_BROKEN;
+            case "yuzukitukumo" -> SLASHBLADE_YUZUKITUKUMO;
+            case "muramasa" -> SLASHBLADE_MURAMASA;
+            case "ruby" -> SLASHBLADE_RUBY;
+            case "sange" -> SLASHBLADE_SANGE;
+            case "fox_black" -> SLASHBLADE_FOX_BLACK;
+            case "fox_white" -> SLASHBLADE_FOX_WHITE;
+            case "rodai_wooden" -> SLASHBLADE_RODAI_WOODEN;
+            case "rodai_stone" -> SLASHBLADE_RODAI_STONE;
+            case "rodai_iron" -> SLASHBLADE_RODAI_IRON;
+            case "rodai_golden" -> SLASHBLADE_RODAI_GOLDEN;
+            case "rodai_diamond" -> SLASHBLADE_RODAI_DIAMOND;
+            case "rodai_netherite" -> SLASHBLADE_RODAI_NETHERITE;
+            case "tagayasan" -> SLASHBLADE_TAGAYASAN;
+            case "agito" -> SLASHBLADE_AGITO;
+            case "agito_rust" -> SLASHBLADE_AGITO_RUST;
+            case "orotiagito" -> SLASHBLADE_OROTIAGITO;
+            case "orotiagito_sealed" -> SLASHBLADE_OROTIAGITO_SEALED;
+            case "orotiagito_rust" -> SLASHBLADE_OROTIAGITO_RUST;
+            case "yasha" -> SLASHBLADE_YASHA;
+            case "yasha_true" -> SLASHBLADE_YASHA_TRUE;
+            case "sabigatana" -> SLASHBLADE_SABIGATANA;
+            case "sabigatana_broken" -> SLASHBLADE_SABIGATANA_BROKEN;
+            case "doutanuki" -> SLASHBLADE_DOUTANUKI;
+            case "koseki" -> SLASHBLADE_KOSEKI;
+            default -> SLASHBLADE;
+        };
+    }
+
     private static Item register(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, SlashBlade.prefix(name), item);
     }

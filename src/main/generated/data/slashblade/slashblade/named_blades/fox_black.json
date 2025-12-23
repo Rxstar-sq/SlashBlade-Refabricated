@@ -13,6 +13,7 @@
       "lvl": 2
     }
   ],
+  "item": "slashblade:slashblade_fox_black",
   "name": "slashblade:fox_black",
   "properties": {
     "attack_base": 5.0,

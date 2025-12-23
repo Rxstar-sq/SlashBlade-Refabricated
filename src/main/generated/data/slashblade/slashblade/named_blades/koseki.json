@@ -5,6 +5,7 @@
       "lvl": 2
     }
   ],
+  "item": "slashblade:slashblade_koseki",
   "name": "slashblade:koseki",
   "properties": {
     "attack_base": 5.0,
