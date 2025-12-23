@@ -8,7 +8,7 @@
     },
     "C": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_ruby",
       "request": {
         "enchantments": [
           {

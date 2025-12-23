@@ -1,11 +1,11 @@
-{
+﻿{
   "type": "slashblade:shaped_blade",
   "blade": "slashblade:orotiagito_sealed",
   "category": "equipment",
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_orotiagito_rust",
       "request": {
         "kill": 100,
         "name": "slashblade:orotiagito_rust"

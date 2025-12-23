@@ -1,11 +1,11 @@
-{
+﻿{
   "type": "slashblade:shaped_blade",
   "blade": "slashblade:sabigatana",
   "category": "equipment",
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_sabigatana",
       "request": {
         "name": "slashblade:sabigatana",
         "sword_type": [

@@ -1,11 +1,11 @@
-{
+﻿{
   "type": "slashblade:shaped_blade",
   "blade": "slashblade:doutanuki",
   "category": "equipment",
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_sabigatana",
       "request": {
         "kill": 100,
         "name": "slashblade:sabigatana",

@@ -1,11 +1,11 @@
-{
+﻿{
   "type": "slashblade:shaped_blade",
   "blade": "slashblade:agito",
   "category": "equipment",
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_agito_rust",
       "request": {
         "kill": 100,
         "name": "slashblade:agito_rust"
