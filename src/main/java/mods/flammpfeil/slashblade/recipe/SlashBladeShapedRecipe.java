@@ -76,14 +76,16 @@ public class SlashBladeShapedRecipe extends ShapedRecipe {
 
     @Override
     public @NotNull ItemStack getResultItem(HolderLookup.@NotNull Provider provider) {
-        ItemStack result = SlashBladeShapedRecipe.getResultBlade(this.getOutputBlade());
-
-        if (!BuiltInRegistries.ITEM.getKey(result.getItem()).equals(getOutputBlade())) {
-            result = provider.lookupOrThrow(SlashBladeDefinition.REGISTRY_KEY).getOrThrow(getOutputBladeKey())
-                    .value().getBlade(provider);
+        // 优先从命名刀定义生成结果；若未注册对应命名刀，则安全回退为目标物品的默认实例
+        var namedLookupOpt = provider.lookup(SlashBladeDefinition.REGISTRY_KEY);
+        if (namedLookupOpt.isPresent()) {
+            var holderOpt = namedLookupOpt.get().get(getOutputBladeKey());
+            if (holderOpt.isPresent()) {
+                return holderOpt.get().value().getBlade(provider);
+            }
         }
-
-        return result;
+        // 回退：直接返回物品默认实例（例如 slashblade:slashblade 等非命名刀）
+        return getResultBlade(outputBlade);
     }
 
     @Override
