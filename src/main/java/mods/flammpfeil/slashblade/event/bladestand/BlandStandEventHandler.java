@@ -414,6 +414,8 @@ public class BlandStandEventHandler {
 
         if (success.get()) {
             spawnSucceedEffects(world, bladeStand, random);
+            // Update the blade item in the blade stand after applying enchantments
+            bladeStand.setItem(blade);
         }
 
         event.setCanceled(true);
