@@ -19,7 +19,7 @@ public class SlashBladeEntityDropBuiltInRegistry {
 
     public static void registerAll(BootstrapContext<EntityDropEntry> bootstrap) {
         bootstrap.register(ENDER_DRAGON_YAMATO, new EntityDropEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "ender_dragon"),
-                SlashBlade.prefix("yamato"), 1.0F, false, true, new Vec3(0F, 60F, 0F)));
+                SlashBlade.prefix("yamato_broken"), 1.0F, false, true, new Vec3(0F, 60F, 0F)));
 
         bootstrap.register(WITHER_SANGE, new EntityDropEntry(ResourceLocation.fromNamespaceAndPath("minecraft", "wither"),
                 SlashBlade.prefix("sange"), 0.3F, true));

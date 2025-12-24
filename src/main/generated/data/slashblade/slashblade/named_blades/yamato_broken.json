@@ -1,6 +1,6 @@
 {
-  "item": "slashblade:slashblade_yamato_broken",
-  "name": "slashblade:slashblade_yamato_broken",
+  "item": "slashblade:slashblade_yamato",
+  "name": "slashblade:yamato_broken",
   "properties": {
     "attack_base": 7.0,
     "sword_type": [

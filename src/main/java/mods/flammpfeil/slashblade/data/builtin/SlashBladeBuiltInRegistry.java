@@ -271,7 +271,7 @@ public class SlashBladeBuiltInRegistry {
                                 new EnchantmentDefinition(Enchantments.FEATHER_FALLING.location(), 4))));
 
         bootstrap.register(YAMATO_BROKEN,
-                new SlashBladeDefinition(SlashBlade.prefix("slashblade_yamato_broken"), SlashBlade.prefix("slashblade_yamato_broken"),
+                new SlashBladeDefinition(SlashBlade.prefix("slashblade_yamato"), SlashBlade.prefix("yamato_broken"),
                         RenderDefinition.Builder.newInstance().textureName(SlashBlade.prefix("model/named/yamato.png"))
                                 .modelName(SlashBlade.prefix("model/named/yamato.obj"))
                                 .standbyRenderType(CarryType.DEFAULT)
