@@ -69,26 +69,7 @@ public class SlashBladeRecipeProvider extends FabricRecipeProvider {
                 .pattern("PBP")
                 .pattern("PPP")
                 .define('B',
-                        SlashBladeIngredient.of(SBItems.SLASHBLADE_YAMATO, RequestDefinition.Builder.newInstance()
-                                .name(SlashBladeBuiltInRegistry.YAMATO_BROKEN.location()).addSwordType(SwordType.BROKEN)
-                                .addSwordType(SwordType.SEALED).build()).toVanilla())
-                .define('P', SBItems.PROUDSOUL_SPHERE)
-                .unlockedBy(getHasName(SBItems.PROUDSOUL_SPHERE), inventoryTrigger(ItemPredicate.Builder.item().withSubPredicate(
-                        ItemPredicateRegistry.SLASHBLADE,
-                        new SlashBladeItemPredicate(
-                                RequestDefinition.Builder.newInstance()
-                                        .name(SlashBladeBuiltInRegistry.YAMATO_BROKEN.location()).addSwordType(SwordType.BROKEN)
-                                        .addSwordType(SwordType.SEALED).build()
-                        )
-
-                ))).save(consumer, SlashBlade.prefix("yamato_fix"));
-
-        SlashBladeShapedRecipeBuilder.shaped(SlashBladeBuiltInRegistry.YAMATO.location())
-                .pattern("PPP")
-                .pattern("PBP")
-                .pattern("PPP")
-                .define('B',
-                        SlashBladeIngredient.of(SBItems.SLASHBLADE_YAMATO, RequestDefinition.Builder.newInstance()
+                        SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
                                 .name(SlashBladeBuiltInRegistry.YAMATO.location()).addSwordType(SwordType.BROKEN)
                                 .addSwordType(SwordType.SEALED).build()).toVanilla())
                 .define('P', SBItems.PROUDSOUL_SPHERE)
@@ -100,7 +81,7 @@ public class SlashBladeRecipeProvider extends FabricRecipeProvider {
                                         .addSwordType(SwordType.SEALED).build()
                         )
 
-                ))).save(consumer, SlashBlade.prefix("yamato_repair"));
+                ))).save(consumer, SlashBlade.prefix("yamato_fix"));
 
         SlashBladeShapedRecipeBuilder.shaped(SBItems.SLASHBLADE).pattern(" EI").pattern("PBD").pattern("SI ")
                 .define('B',
