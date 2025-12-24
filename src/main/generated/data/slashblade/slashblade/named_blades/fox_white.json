@@ -22,7 +22,7 @@
     }
   ],
   "item": "slashblade:slashblade_fox_white",
-  "name": "slashblade:fox_white",
+  "name": "slashblade:slashblade_fox_white",
   "properties": {
     "attack_base": 5.0,
     "max_damage": 70,

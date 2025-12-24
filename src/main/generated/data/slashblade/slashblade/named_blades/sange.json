@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_sange",
-  "name": "slashblade:sange",
+  "name": "slashblade:slashblade_sange",
   "properties": {
     "attack_base": 6.0,
     "max_damage": 70,

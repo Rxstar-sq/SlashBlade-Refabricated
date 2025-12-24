@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_doutanuki",
-  "name": "slashblade:doutanuki",
+  "name": "slashblade:slashblade_doutanuki",
   "properties": {
     "attack_base": 5.0,
     "max_damage": 60,

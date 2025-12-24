@@ -8,7 +8,7 @@
             "predicates": {
               "slashblade:slashblade": {
                 "requestBlade": {
-                  "name": "slashblade:yamato_broken",
+                  "name": "slashblade:yamato",
                   "sword_type": [
                     "broken",
                     "sealed"
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "slashblade:yamato_fix"
+        "recipe": "slashblade:yamato_repair"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -36,7 +36,7 @@
   ],
   "rewards": {
     "recipes": [
-      "slashblade:yamato_fix"
+      "slashblade:yamato_repair"
     ]
   }
 }

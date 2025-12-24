@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_muramasa",
-  "name": "slashblade:muramasa",
+  "name": "slashblade:slashblade_muramasa",
   "properties": {
     "attack_base": 7.0,
     "max_damage": 50,

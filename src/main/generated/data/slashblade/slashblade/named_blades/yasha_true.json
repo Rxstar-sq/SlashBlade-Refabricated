@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_yasha_true",
-  "name": "slashblade:yasha_true",
+  "name": "slashblade:slashblade_yasha_true",
   "properties": {
     "attack_base": 6.0,
     "max_damage": 70,

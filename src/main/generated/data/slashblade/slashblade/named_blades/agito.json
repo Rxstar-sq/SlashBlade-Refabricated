@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_agito",
-  "name": "slashblade:agito",
+  "name": "slashblade:slashblade_agito",
   "properties": {
     "attack_base": 5.0,
     "max_damage": 60,

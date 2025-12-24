@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_orotiagito",
-  "name": "slashblade:orotiagito",
+  "name": "slashblade:slashblade_orotiagito",
   "properties": {
     "attack_base": 7.0,
     "max_damage": 60,

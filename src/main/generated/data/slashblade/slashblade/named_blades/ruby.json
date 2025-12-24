@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_ruby",
-  "name": "slashblade:ruby",
+  "name": "slashblade:slashblade_ruby",
   "properties": {
     "attack_base": 5.0,
     "max_damage": 45

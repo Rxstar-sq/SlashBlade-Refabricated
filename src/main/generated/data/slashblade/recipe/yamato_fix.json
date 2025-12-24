@@ -5,9 +5,9 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_yamato_broken",
       "request": {
-        "name": "slashblade:yamato",
+        "name": "slashblade:yamato_broken",
         "sword_type": [
           "broken",
           "sealed"

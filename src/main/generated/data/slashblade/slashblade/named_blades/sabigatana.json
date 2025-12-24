@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_sabigatana",
-  "name": "slashblade:sabigatana",
+  "name": "slashblade:slashblade_sabigatana",
   "properties": {
     "attack_base": 3.0
   },

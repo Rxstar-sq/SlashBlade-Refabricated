@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_sabigatana_broken",
-  "name": "slashblade:sabigatana",
+  "name": "slashblade:slashblade_sabigatana_broken",
   "properties": {
     "attack_base": 3.0,
     "sword_type": [

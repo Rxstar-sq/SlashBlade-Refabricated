@@ -10,7 +10,7 @@
     }
   ],
   "item": "slashblade:slashblade_tagayasan",
-  "name": "slashblade:tagayasan",
+  "name": "slashblade:slashblade_tagayasan",
   "properties": {
     "attack_base": 5.0,
     "max_damage": 70,

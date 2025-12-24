@@ -13,7 +13,7 @@
     }
   ],
   "item": "slashblade:slashblade_yuzukitukumo",
-  "name": "slashblade:yuzukitukumo",
+  "name": "slashblade:slashblade_yuzukitukumo",
   "properties": {
     "attack_base": 6.0,
     "slash_art": "slashblade:drive_horizontal",

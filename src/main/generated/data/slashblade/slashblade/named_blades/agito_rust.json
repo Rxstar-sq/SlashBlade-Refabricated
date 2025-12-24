@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_agito_rust",
-  "name": "slashblade:agito_rust",
+  "name": "slashblade:slashblade_agito_rust",
   "properties": {
     "attack_base": 3.0,
     "max_damage": 60,

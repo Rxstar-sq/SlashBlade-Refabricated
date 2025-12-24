@@ -1,6 +1,6 @@
 {
   "item": "slashblade:slashblade_rodai_golden",
-  "name": "slashblade:rodai_golden",
+  "name": "slashblade:slashblade_rodai_golden",
   "properties": {
     "attack_base": 2.0,
     "max_damage": 33
