@@ -55,6 +55,26 @@ public record SlashBladeIngredient(HolderSet<Item> items, RequestDefinition requ
     }
 
     public static SlashBladeIngredient of(RequestDefinition request) {
+        // 若 request 指定了命名刀，则将材料 items 设为对应的独立物品；否则回退到通用 slashblade
+        var name = request.getName();
+        if (name != null && !name.equals(SlashBlade.prefix("none"))) {
+            String itemPath = name.getPath();
+            // 如果路径以 slashblade_ 开头，则去掉这个前缀再处理 SwordType 后缀
+            if (itemPath.startsWith("slashblade_")) {
+                itemPath = itemPath.substring("slashblade_".length());
+            }
+            
+            // 如果 RequestDefinition 指定了 SwordType 限制，需要追加对应后缀
+            var swordTypes = request.getDefaultType();
+            if (!swordTypes.isEmpty()) {
+                // 当有多个 SwordType 时，使用第一个；通常只会有一个
+                itemPath = itemPath + "_" + swordTypes.get(0).name().toLowerCase();
+            }
+            
+            // 先尝试获取对应的物品（带有 SwordType 后缀），然后再试原始名称
+            Item target = SBItems.getNamedBladeItem(itemPath);
+            return new SlashBladeIngredient(Set.of(target), request);
+        }
         return new SlashBladeIngredient(Set.of(SBItems.SLASHBLADE), request);
     }
 
@@ -64,8 +84,12 @@ public record SlashBladeIngredient(HolderSet<Item> items, RequestDefinition requ
     }
 
     public static SlashBladeIngredient of(ResourceLocation request) {
-        return new SlashBladeIngredient(Set.of(SBItems.SLASHBLADE),
-                RequestDefinition.Builder.newInstance().name(request).build());
+        // 根据命名刀设置独立物品，保证生成的 JSON 中 items 为具体刀而非通用刀
+        Item target = BuiltInRegistries.ITEM.containsKey(request)
+            ? BuiltInRegistries.ITEM.get(request)
+            : SBItems.getNamedBladeItem(request.getPath());
+        return new SlashBladeIngredient(Set.of(target),
+            RequestDefinition.Builder.newInstance().name(request).build());
     }
 
     public static SlashBladeIngredient blankNameless() {

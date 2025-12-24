@@ -8,14 +8,14 @@
     },
     "C": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_ruby",
       "request": {
         "enchantments": [
           {
             "id": "minecraft:looting"
           }
         ],
-        "name": "slashblade:ruby"
+        "name": "slashblade:slashblade_ruby"
       }
     },
     "E": {
@@ -68,6 +68,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_fox_white"
   }
 }

@@ -5,10 +5,10 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_orotiagito_sealed",
       "request": {
         "kill": 1000,
-        "name": "slashblade:orotiagito_sealed",
+        "name": "slashblade:slashblade_orotiagito_sealed",
         "proud_soul": 1000,
         "refine": 10
       }
@@ -54,6 +54,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_orotiagito"
   }
 }

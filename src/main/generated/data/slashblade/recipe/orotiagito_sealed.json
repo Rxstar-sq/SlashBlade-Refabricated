@@ -5,10 +5,10 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_orotiagito_rust",
       "request": {
         "kill": 100,
-        "name": "slashblade:orotiagito_rust"
+        "name": "slashblade:slashblade_orotiagito_rust"
       }
     },
     "S": {
@@ -49,6 +49,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_orotiagito_sealed"
   }
 }

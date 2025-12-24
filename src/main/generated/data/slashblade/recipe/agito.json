@@ -5,10 +5,10 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_agito_rust",
       "request": {
         "kill": 100,
-        "name": "slashblade:agito_rust"
+        "name": "slashblade:slashblade_agito_rust"
       }
     },
     "S": {
@@ -49,6 +49,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_agito"
   }
 }

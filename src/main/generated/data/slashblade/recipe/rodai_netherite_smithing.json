@@ -5,9 +5,9 @@
   },
   "base": {
     "fabric:type": "slashblade:blade",
-    "items": "slashblade:slashblade",
+    "items": "slashblade:slashblade_rodai_diamond",
     "request": {
-      "name": "slashblade:rodai_diamond"
+      "name": "slashblade:slashblade_rodai_diamond"
     }
   },
   "blade": "slashblade:rodai_netherite",

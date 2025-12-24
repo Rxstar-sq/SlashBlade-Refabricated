@@ -45,7 +45,10 @@ public class SlashBladeShapedRecipeBuilder implements RecipeBuilder {
     }
 
     public static SlashBladeShapedRecipeBuilder shaped(ResourceLocation blade) {
-        return shaped(SBItems.SLASHBLADE, 1).blade(blade);
+        // 使用与命名刀对应的独立物品作为合成结果，避免生成通用 slashblade:slashblade
+        // 如果找不到匹配，则回退到通用物品
+        var resultItem = SBItems.getNamedBladeItem(blade.getPath());
+        return shaped(resultItem, 1).blade(blade);
     }
 
     public static SlashBladeShapedRecipeBuilder shaped(ItemLike result) {

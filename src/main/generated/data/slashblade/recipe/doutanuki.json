@@ -5,10 +5,10 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_sabigatana",
       "request": {
         "kill": 100,
-        "name": "slashblade:sabigatana",
+        "name": "slashblade:slashblade_sabigatana",
         "proud_soul": 1000,
         "refine": 10
       }
@@ -51,6 +51,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_doutanuki"
   }
 }

@@ -5,9 +5,9 @@
   "key": {
     "B": {
       "fabric:type": "slashblade:blade",
-      "items": "slashblade:slashblade",
+      "items": "slashblade:slashblade_sabigatana_broken",
       "request": {
-        "name": "slashblade:sabigatana",
+        "name": "slashblade:slashblade_sabigatana",
         "sword_type": [
           "broken",
           "sealed"
@@ -52,6 +52,6 @@
       }
     },
     "count": 1,
-    "id": "slashblade:slashblade"
+    "id": "slashblade:slashblade_sabigatana"
   }
 }
