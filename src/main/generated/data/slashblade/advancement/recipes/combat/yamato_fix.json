@@ -8,7 +8,7 @@
             "predicates": {
               "slashblade:slashblade": {
                 "requestBlade": {
-                  "name": "slashblade:slashblade_yamato",
+                  "name": "slashblade:slashblade_yamato_broken",
                   "sword_type": [
                     "broken",
                     "sealed"

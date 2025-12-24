@@ -72,14 +72,14 @@ public class SlashBladeRecipeProvider extends FabricRecipeProvider {
                 .pattern("PPP")
                 .define('B',
                         SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
-                                .name(defName(SlashBladeBuiltInRegistry.YAMATO)).addSwordType(SwordType.BROKEN)
+                                .name(SlashBlade.prefix("slashblade_yamato_broken")).addSwordType(SwordType.BROKEN)
                                 .addSwordType(SwordType.SEALED).build()).toVanilla())
                 .define('P', SBItems.PROUDSOUL_SPHERE)
                 .unlockedBy(getHasName(SBItems.PROUDSOUL_SPHERE), inventoryTrigger(ItemPredicate.Builder.item().withSubPredicate(
                         ItemPredicateRegistry.SLASHBLADE,
                         new SlashBladeItemPredicate(
                                 RequestDefinition.Builder.newInstance()
-                                        .name(defName(SlashBladeBuiltInRegistry.YAMATO)).addSwordType(SwordType.BROKEN)
+                                        .name(SlashBlade.prefix("slashblade_yamato_broken")).addSwordType(SwordType.BROKEN)
                                         .addSwordType(SwordType.SEALED).build()
                         )
 
@@ -193,7 +193,7 @@ public class SlashBladeRecipeProvider extends FabricRecipeProvider {
                 .pattern(" P ").pattern("B  ")
                 .define('B',
                         SlashBladeIngredient.of(RequestDefinition.Builder.newInstance()
-                                .name(defName(SlashBladeBuiltInRegistry.SABIGATANA)).addSwordType(SwordType.BROKEN)
+                                .name(SlashBlade.prefix("slashblade_sabigatana_broken")).addSwordType(SwordType.BROKEN)
                                 .addSwordType(SwordType.SEALED).build()).toVanilla())
                 .define('P', Ingredient.of(SBItems.PROUDSOUL_INGOT))
                 .unlockedBy(getHasName(SBItems.PROUDSOUL_INGOT), has(SBItems.PROUDSOUL_INGOT)).save(consumer);

@@ -64,11 +64,14 @@ public record SlashBladeIngredient(HolderSet<Item> items, RequestDefinition requ
                 itemPath = itemPath.substring("slashblade_".length());
             }
             
-            // 如果 RequestDefinition 指定了 SwordType 限制，需要追加对应后缀
+            // 如果 RequestDefinition 指定了 SwordType 限制，且 itemPath 还没有 SwordType 后缀，则追加
             var swordTypes = request.getDefaultType();
             if (!swordTypes.isEmpty()) {
-                // 当有多个 SwordType 时，使用第一个；通常只会有一个
-                itemPath = itemPath + "_" + swordTypes.get(0).name().toLowerCase();
+                String swordTypeSuffix = "_" + swordTypes.get(0).name().toLowerCase();
+                // 只有在 itemPath 不以该后缀结尾时才追加
+                if (!itemPath.endsWith(swordTypeSuffix)) {
+                    itemPath = itemPath + swordTypeSuffix;
+                }
             }
             
             // 先尝试获取对应的物品（带有 SwordType 后缀），然后再试原始名称

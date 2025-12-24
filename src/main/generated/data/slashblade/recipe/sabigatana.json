@@ -7,7 +7,7 @@
       "fabric:type": "slashblade:blade",
       "items": "slashblade:slashblade_sabigatana_broken",
       "request": {
-        "name": "slashblade:slashblade_sabigatana",
+        "name": "slashblade:slashblade_sabigatana_broken",
         "sword_type": [
           "broken",
           "sealed"
