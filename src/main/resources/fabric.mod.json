@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "slashblade",
+  "id": "slashblade_RE_refabricated",
   "version": "${version}",
-  "name": "SlashBlade: Refabricated",
+  "name": "SlashBlade: RE-Refabricated",
   "description": "SlashBlade: Resharped unofficial Fabric port",
   "authors": [
-    "Sh1roCu"
+    "殇泣乀"
   ],
   "contact": {},
   "license": "MIT",
