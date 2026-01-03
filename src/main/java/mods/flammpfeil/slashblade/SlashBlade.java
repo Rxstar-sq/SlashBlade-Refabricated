@@ -32,7 +32,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class SlashBlade {
-    public static final String MODID = "slashblade";
+    public static final String MODID = "slashblade_re_refabricated";
 
     public static ResourceLocation prefix(String path) {
         return ResourceLocation.fromNamespaceAndPath(SlashBlade.MODID, path);
