@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "slashblade_re_refabricated",
+  "id": "slashblade",
   "version": "${version}",
   "name": "SlashBlade: RE-Refabricated",
   "description": "SlashBlade: Resharped unofficial Fabric port",
@@ -35,9 +35,9 @@
   },
   "custom": {
     "cardinal-components": [
-      "slashblade_re_refabricated:input_state",
-      "slashblade_re_refabricated:concentration",
-      "slashblade_re_refabricated:mob_effect"
+      "slashblade:input_state",
+      "slashblade:concentration",
+      "slashblade:mob_effect"
     ]
   },
   "mixins": [
