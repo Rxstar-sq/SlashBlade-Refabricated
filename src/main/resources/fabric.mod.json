@@ -35,9 +35,9 @@
   },
   "custom": {
     "cardinal-components": [
-      "slashblade:input_state",
-      "slashblade:concentration",
-      "slashblade:mob_effect"
+      "slashblade_re_refabricated:input_state",
+      "slashblade_re_refabricated:concentration",
+      "slashblade_re_refabricated:mob_effect"
     ]
   },
   "mixins": [
