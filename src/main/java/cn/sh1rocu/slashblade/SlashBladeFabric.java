@@ -13,6 +13,7 @@ import mods.flammpfeil.slashblade.event.handler.EntitySpawnEventHandler;
 import mods.flammpfeil.slashblade.event.handler.RegistryHandler;
 import mods.flammpfeil.slashblade.event.handler.SlashBladeEventHandler;
 import mods.flammpfeil.slashblade.registry.specialeffects.WitherEdge;
+import mods.flammpfeil.slashblade.registry.specialeffects.DeathChou;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -37,5 +38,6 @@ public class SlashBladeFabric implements ModInitializer {
         SlashBladeRegistryEvent.PRE.register(SlashBladeEventHandler::onLoadingBlade);
         SlashBladeEvent.UPDATE.register(WitherEdge::onSlashBladeUpdate);
         SlashBladeEvent.HIT.register(WitherEdge::onSlashBladeHit);
+        SlashBladeEvent.HIT.register(DeathChou::onSlashBladeHit);
     }
 }

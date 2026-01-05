@@ -240,6 +240,8 @@ public class SlashBladeBuiltInRegistry {
                         .build(),
                 PropertiesDefinition.Builder.newInstance().baseAttackModifier(5.0F).maxDamage(70)
                         .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.PIERCING))
+                        //试着加上死蝶SE
+                        .addSpecialEffect(SpecialEffectsRegistry.SPECIAL_EFFECT.getKey(SpecialEffectsRegistry.DEATH_CHOU)) // 新增：死蝶
                         .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
                 List.of(new EnchantmentDefinition(Enchantments.SMITE.location(), 4),
                         new EnchantmentDefinition(Enchantments.KNOCKBACK.location(), 2),
@@ -312,6 +314,9 @@ public class SlashBladeBuiltInRegistry {
                         .slashArtsType(SlashArtsRegistry.SLASH_ARTS.getKey(SlashArtsRegistry.VOID_SLASH))
                         .defaultSwordType(List.of(SwordType.BEWITCHED)).build(),
                 Lists.newArrayList()));
+
+
+
 
     }
 

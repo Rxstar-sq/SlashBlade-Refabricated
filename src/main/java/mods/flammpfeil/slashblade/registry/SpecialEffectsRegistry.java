@@ -21,7 +21,7 @@ public class SpecialEffectsRegistry {
             .buildAndRegister();
 
     public static final SpecialEffect WITHER_EDGE = Registry.register(SPECIAL_EFFECT, SlashBlade.prefix("wither_edge"), new WitherEdge());
-
-
     public static final SpecialEffect DEATH_CHOU = Registry.register(SPECIAL_EFFECT, SlashBlade.prefix("death_chou"), new DeathChou());
+
+    
 }

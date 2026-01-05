@@ -19,6 +19,9 @@
     "attack_base": 5.0,
     "max_damage": 70,
     "slash_art": "slashblade:piercing",
+    "special_effects": [
+      "slashblade:death_chou"
+    ],
     "sword_type": [
       "bewitched"
     ]
