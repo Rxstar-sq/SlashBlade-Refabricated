@@ -3,6 +3,9 @@ package mods.flammpfeil.slashblade.registry;
 import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.registry.specialeffects.SpecialEffect;
 import mods.flammpfeil.slashblade.registry.specialeffects.WitherEdge;
+import mods.flammpfeil.slashblade.registry.specialeffects.DeathChou;
+
+
 import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
 import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.minecraft.core.Registry;
@@ -18,4 +21,7 @@ public class SpecialEffectsRegistry {
             .buildAndRegister();
 
     public static final SpecialEffect WITHER_EDGE = Registry.register(SPECIAL_EFFECT, SlashBlade.prefix("wither_edge"), new WitherEdge());
+
+
+    public static final SpecialEffect DEATH_CHOU = Registry.register(SPECIAL_EFFECT, SlashBlade.prefix("death_chou"), new DeathChou());
 }
