@@ -43,12 +43,12 @@
   "item.slashblade.agito_rust": "錆び付いたアギト",
   "item.slashblade.orotiagito_rust": "錆び付いたアギト",
 
-  "item.slashblade.rodai_wooden": "「撃柝」露台",
-  "item.slashblade.rodai_stone": "「鋭巌」露台",
-  "item.slashblade.rodai_iron": "利刀「鉄」露台",
-  "item.slashblade.rodai_golden": "宝刀「山吹」露台",
-  "item.slashblade.rodai_diamond": "名刀「金剛」露台",
-  "item.slashblade.rodai_netherite": "名刀「玄鈺」露台",
+  "item.slashblade.slashblade_rodai_wooden": "「撃柝」露台",
+  "item.slashblade.slashblade_rodai_stone": "「鋭巌」露台",
+  "item.slashblade.slashblade_rodai_iron": "利刀「鉄」露台",
+  "item.slashblade.slashblade_rodai_golden": "宝刀「山吹」露台",
+  "item.slashblade.slashblade_rodai_diamond": "名刀「金剛」露台",
+  "item.slashblade.slashblade_rodai_netherite": "名刀「玄鈺」露台",
 
   "slashblade.sword_type.bewitched": "妖",
   "slashblade.sword_type.enchanted": "印",
