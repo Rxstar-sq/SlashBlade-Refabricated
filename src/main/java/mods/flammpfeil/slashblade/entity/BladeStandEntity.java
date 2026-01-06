@@ -26,6 +26,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 
@@ -165,5 +167,15 @@ public class BladeStandEntity extends ItemFrame implements IEntityWithComplexSpa
     @Override
     public boolean survives() {
         return true;
+    }
+
+    @Override
+    protected AABB calculateBoundingBox(BlockPos blockPos, Direction direction) {
+        double d0 = 2D / 16D;
+        Vec3 vec3 = Vec3.atCenterOf(blockPos).relative(direction, -d0);
+        double d = 0.75;
+        double e = 0.75;
+        double g = 0.75;
+        return AABB.ofSize(vec3, d, e, g);
     }
 }

@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.awt.*;
-import java.util.AbstractMap;
+import java.util.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -354,7 +354,7 @@ public interface ISlashBladeState {
 
     void setMaxDamage(int damage);
 
-    List<ResourceLocation> getSpecialEffects();
+    Collection<ResourceLocation> getSpecialEffects();
 
     void setSpecialEffects(ListTag list);
 
