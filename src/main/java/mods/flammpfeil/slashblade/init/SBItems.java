@@ -191,6 +191,7 @@ public class SBItems {
             case "sabigatana_broken" -> SLASHBLADE_SABIGATANA_BROKEN;
             case "doutanuki" -> SLASHBLADE_DOUTANUKI;
             case "koseki" -> SLASHBLADE_KOSEKI;
+        
             default -> SLASHBLADE;
         };
     }
