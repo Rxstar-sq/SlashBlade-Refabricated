@@ -170,6 +170,15 @@ public class BladeStandEntity extends ItemFrame implements IEntityWithComplexSpa
     }
 
     @Override
+    public void tick() {
+    super.tick();
+    ItemStack blade = this.getItem();
+    if (blade.isEmpty()) return;
+    ISlashBladeState state = CapabilitySlashBlade.getBladeState(blade).orElseThrow(NullPointerException::new);
+    SlashBladeEvent.BLADE_STAND_TICK.invoker().onBladeStandTick(new SlashBladeEvent.BladeStandTickEvent(blade, state, this));
+}
+
+    @Override
     protected AABB calculateBoundingBox(BlockPos blockPos, Direction direction) {
         double d0 = 2D / 16D;
         Vec3 vec3 = Vec3.atCenterOf(blockPos).relative(direction, -d0);
