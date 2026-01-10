@@ -73,10 +73,7 @@ repositories {
     maven { url = "https://mvn.devos.one/snapshots/" }
     // Patchouli
     maven { url = 'https://maven.blamejared.com' }
-    maven {
-        // 个人仓库，包含fork的PortingLib
-        url = "https://raw.github.com/Sh1roCu/Sh1roCu_MCRepo/master/repository"
-    }
+    
 }
 
 dependencies {
@@ -90,9 +87,12 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:obj_loader:3.1.0-beta.79+1.21.1"))
-    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:items:3.1.0-beta.79+1.21.1"))
-    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:entity:3.1.0-beta.79+1.21.1"))
+    //原模组的maven无法访问，回撤至75版
+    // PortingLib 使用官方模块化版本，同时添加 gametest 模块以支持 runDataGen
+    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:obj_loader:3.1.0-beta.75+1.21.1"))
+    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:items:3.1.0-beta.75+1.21.1"))
+    modImplementation(include("io.github.fabricators_of_create.Porting-Lib:entity:3.1.0-beta.75+1.21.1"))
+    //modImplementation(include("io.github.fabricators_of_create.Porting-Lib:gametest:3.1.0-beta.78+1.21.1"))
 
     compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
     annotationProcessor 'com.google.code.findbugs:jsr305:3.0.2'
