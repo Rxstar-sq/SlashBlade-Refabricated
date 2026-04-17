@@ -30,6 +30,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ParticleTypes;
@@ -58,6 +59,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -445,6 +447,20 @@ public class ItemSlashBlade extends SwordItem implements ItemSlashBladeExtension
             return;
         if (entityIn == null)
             return;
+
+        if (!worldIn.isClientSide()) {
+            CapabilitySlashBlade.getBladeState(stack).ifPresent(state -> {
+                String translationKey = state.getTranslationKey();
+                if (translationKey == null || translationKey.isBlank())
+                    return;
+
+                CustomData.update(DataComponents.CUSTOM_DATA, stack, nbt -> {
+                    if (!nbt.contains("blade_type_id") || !translationKey.equals(nbt.getString("blade_type_id"))) {
+                        nbt.putString("blade_type_id", translationKey);
+                    }
+                });
+            });
+        }
 
         CapabilitySlashBlade.getBladeState(stack).ifPresent((state) -> {
             SlashBladeEvent.UpdateEvent event = new SlashBladeEvent.UpdateEvent(stack, state, worldIn, entityIn, itemSlot, isSelected);
