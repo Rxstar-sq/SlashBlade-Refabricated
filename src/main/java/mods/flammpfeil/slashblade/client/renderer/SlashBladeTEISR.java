@@ -3,6 +3,7 @@ package mods.flammpfeil.slashblade.client.renderer;
 import com.google.common.base.Suppliers;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import mods.flammpfeil.slashblade.SlashBlade;
 import mods.flammpfeil.slashblade.capability.slashblade.CapabilitySlashBlade;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeFirstPersonRender;
 import mods.flammpfeil.slashblade.client.renderer.model.BladeModel;
@@ -201,11 +202,7 @@ public class SlashBladeTEISR extends BlockEntityWithoutLevelRenderer {
         if (!(stack.getItem() instanceof ItemSlashBladeDetune)) {
             String key = cap.get().getTranslationKey();
             if (!key.isBlank()) {
-                ResourceLocation bladeName = ResourceLocation.tryParse(key.substring(5)
-                        .replaceFirst(Pattern.quote("."), Matcher.quoteReplacement(":"))
-                        // 附属包会存在namespace:path1/path2这种格式的ResourceLocation，需要将'.'替换为'/'
-                        .replace(".", "/"));
-                SlashBladeDefinition slashBladeDefinition = BladeModelManager.getClientSlashBladeRegistry().get(bladeName);
+                SlashBladeDefinition slashBladeDefinition = findDefinitionByTranslationKey(key);
 
                 if (slashBladeDefinition != null)
                     name = slashBladeDefinition.getRenderDefinition().getModelName().toString();
@@ -223,17 +220,34 @@ public class SlashBladeTEISR extends BlockEntityWithoutLevelRenderer {
         if (!(stack.getItem() instanceof ItemSlashBladeDetune)) {
             String key = cap.get().getTranslationKey();
             if (!key.isBlank()) {
-                ResourceLocation bladeName = ResourceLocation.tryParse(key.substring(5)
-                        .replaceFirst(Pattern.quote("."), Matcher.quoteReplacement(":"))
-                        // 附属包会存在namespace:path1/path2这种格式的ResourceLocation，需要将'.'替换为'/'
-                        .replace(".", "/"));
-                SlashBladeDefinition slashBladeDefinition = BladeModelManager.getClientSlashBladeRegistry().get(bladeName);
+                SlashBladeDefinition slashBladeDefinition = findDefinitionByTranslationKey(key);
                 if (slashBladeDefinition != null)
                     name = slashBladeDefinition.getRenderDefinition().getTextureName().toString();
             }
         }
         return !name.isBlank()
                 ? ResourceLocation.tryParse(name) : DefaultResources.resourceDefaultTexture;
+    }
+
+    private SlashBladeDefinition findDefinitionByTranslationKey(String key) {
+        ResourceLocation bladeName = ResourceLocation.tryParse(key.substring(5)
+                .replaceFirst(Pattern.quote("."), Matcher.quoteReplacement(":"))
+                // 附属包会存在namespace:path1/path2这种格式的ResourceLocation，需要将'.'替换为'/'
+                .replace(".", "/"));
+        if (bladeName == null)
+            return null;
+
+        SlashBladeDefinition slashBladeDefinition = BladeModelManager.getClientSlashBladeRegistry().get(bladeName);
+        if (slashBladeDefinition != null)
+            return slashBladeDefinition;
+
+        // 向后兼容旧翻译键: item.slashblade.ruby -> slashblade:slashblade_ruby
+        if (SlashBlade.MODID.equals(bladeName.getNamespace()) && !bladeName.getPath().startsWith("slashblade_")) {
+            ResourceLocation uniqueIdName = SlashBlade.prefix("slashblade_" + bladeName.getPath());
+            return BladeModelManager.getClientSlashBladeRegistry().get(uniqueIdName);
+        }
+
+        return null;
     }
 
     public void renderModel(ItemStack stack, PoseStack matrixStack, MultiBufferSource bufferIn, int lightIn) {
